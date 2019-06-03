@@ -1,0 +1,6 @@
+apply plugin: 'war'
+
+dependencies {
+    implementation "com.aerospike:aerospike-client:4.1.11"
+    runtime "com.aerospike:aerospike-client:4.1.11"
+}

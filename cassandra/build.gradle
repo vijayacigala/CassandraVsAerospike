@@ -1,0 +1,6 @@
+apply plugin: 'war'
+
+dependencies {
+    implementation group: 'com.datastax.oss', name: 'java-driver-core', version: '4.0.1'
+    runtime group: 'com.datastax.oss', name: 'java-driver-core', version: '4.0.1'
+}

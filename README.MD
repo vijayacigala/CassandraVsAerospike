@@ -1,0 +1,1 @@
+demo project with cassandra and aerospike examples each as a subproject
