@@ -8,16 +8,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.learning.demo.cassandra.mappers.EventMapper.map;
+import static java.lang.System.currentTimeMillis;
 
 public class EventsDao {
     public List<Event> getEvents() {
 
+
         List<Event> events = new ArrayList<>();
         CqlSession session = CqlSession.builder().withKeyspace("demo").build();
 
+        long start = currentTimeMillis();
+        System.out.println("Started at " + start);
         ResultSet resultSet = session.execute("select * from events");
-
         resultSet.forEach( row -> events.add(map(row)));
+        long end = currentTimeMillis();
+        System.out.println("Ended at " + end);
+        System.out.println("Processed in " + (end-start) + " millis");
+
         return events;
     }
 

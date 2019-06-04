@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.learning.demo.aerospike.mappers.EventMapper.map;
+import static java.lang.System.currentTimeMillis;
 
 public class EventsDao {
     public List<Event> getEvents() {
@@ -18,12 +19,17 @@ public class EventsDao {
 
         ScanPolicy policy = new ScanPolicy();
         policy.sendKey = true;
+        long start = currentTimeMillis();
+        System.out.println("Started at " + start);
         client.scanAll(policy, "demo", "events", new ScanCallback() {
             @Override
             public void scanCallback(Key key, Record record) throws AerospikeException {
                 events.add(map(record));
             }
         });
+        long end = currentTimeMillis();
+        System.out.println("Ended at " + end);
+        System.out.println("Processed in " + (end-start) + " millis");
 
         return events;
     }
