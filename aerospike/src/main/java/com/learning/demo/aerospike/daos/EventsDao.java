@@ -2,7 +2,6 @@ package com.learning.demo.aerospike.daos;
 
 import com.aerospike.client.*;
 import com.aerospike.client.policy.ScanPolicy;
-import com.aerospike.client.policy.WritePolicy;
 import com.learning.demo.aerospike.pojos.Event;
 
 import java.util.ArrayList;

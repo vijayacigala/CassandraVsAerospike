@@ -33,14 +33,11 @@ subprojects { it ->
         implementation 'org.glassfish.jersey.containers:jersey-container-servlet:2.19'
         runtime 'org.glassfish.jersey.containers:jersey-container-servlet:2.19'
 
-        compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.19'
+        implementation group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.19'
         runtime group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.19'
 
         implementation group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.18.v20190429'
         grettyRunnerTomcat8 group: 'org.apache.tomcat', name: 'tomcat-dbcp', version: '9.0.12'
-
-        implementation group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.3'
-        runtime group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.3'
     }
 
     gretty {

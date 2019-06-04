@@ -8,6 +8,6 @@ import javax.ws.rs.ApplicationPath;
 public class App extends ResourceConfig {
     public App() {
         register(new Binder());
-        packages(true, "com.learning.demo.aerospike");
+        packages(true, "com.learning.demo.cassandra");
     }
 }
