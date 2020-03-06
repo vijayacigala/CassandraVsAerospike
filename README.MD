@@ -1,1 +1,1 @@
-demo project with cassandra and aerospike examples each as a subproject
+sample project to check performace of cassandra vs aerospike 
