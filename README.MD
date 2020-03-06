@@ -1,1 +1,1 @@
-sample project to check performace of cassandra vs aerospike 
+sample project to check performance of cassandra vs aerospike 
